@@ -22,4 +22,16 @@ class C_login extends CI_Controller {
 	{
 		$this->load->view('login/login');
 	}
+	public function authentikasi_admin() 
+	{
+
+	}
+	public function login_admin()
+	{
+
+	}
+	public function logout_admin()
+	{
+		
+	}
 }
