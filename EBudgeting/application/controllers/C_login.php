@@ -28,6 +28,7 @@ class C_login extends CI_Controller {
 	}
 	public function login_admin()
 	{
+		$this->load->view('dashboard/dashboard');
 
 	}
 	public function logout_admin()
