@@ -9,14 +9,14 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
   <link rel="shortcut icon" href="" />
-  <link rel="stylesheet" href="<?php echo base_url('assets_style/assets/bower_components/bootstrap/dist/css/bootstrap.min.css');?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/assets_style/assets/bower_components/bootstrap/dist/css/bootstrap.min.css');?>">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="<?php echo base_url('assets_style/assets/bower_components/font-awesome/css/font-awesome.min.css');?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/assets_style/assets/bower_components/font-awesome/css/font-awesome.min.css');?>">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="<?php echo base_url('assets_style/assets/bower_components/Ionicons/css/ionicons.min.css');?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/assets_style/assets/bower_components/Ionicons/css/ionicons.min.css');?>">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?php echo base_url('assets_style/assets/dist/css/AdminLTE.min.css');?>">
-  <link rel="stylesheet" href="<?php echo base_url('assets_style/assets/dist/css/responsivelogin.css');?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/assets_style/assets/dist/css/AdminLTE.min.css');?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/assets_style/assets/dist/css/responsivelogin.css');?>">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,7 +43,9 @@
     </style>
   </head>
 <body class="hold-transition login-page" style="overflow-y: hidden;background:url(
-	'<?php echo base_url('assets_style/image/plnLogin.jpeg');?>')no-repeat;background-size:100%;">
+	'<?php echo base_url('assets/assets_style/image/plnLogin.jpeg');?>')no-repeat;background-size:100%;">
+  <?php echo base_url('');?>
+    
 <div class="login-box">
 	<br/>
   <div class="login-logo">
@@ -53,7 +55,7 @@
   <!-- /.login-logo -->
   <div class="login-box-body" style="border:2px solid #226bbf;">
     <p class="login-box-msg" style="font-size:16px;"></p>
-    <form action="<?= base_url('login/auth');?>" method="POST">
+    <form action="<?= base_url('C_login/login_admin');?>" method="POST">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Username" id="user" name="user" required="required" autocomplete="off">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -92,10 +94,10 @@
 <!-- Response Ajax -->
 <div id="tampilkan"></div>
 <!-- jQuery 3 -->
-<script src="<?php echo base_url('assets_style/assets/bower_components/jquery/dist/jquery.min.js');?>"></script>
+<script src="<?php echo base_url('assets/assets_style/assets/bower_components/jquery/dist/jquery.min.js');?>"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="<?php echo base_url('assets_style/assets/bower_components/bootstrap/dist/js/bootstrap.min.js');?>"></script>
+<script src="<?php echo base_url('assets/assets_style/assets/bower_components/bootstrap/dist/js/bootstrap.min.js');?>"></script>
 <!-- iCheck -->
-<script src="<?php echo base_url('assets_style/assets/plugins/iCheck/icheck.min.js');?>"></script>
+<script src="<?php echo base_url('assets/assets_style/assets/plugins/iCheck/icheck.min.js');?>"></script>
 </body>
 </html>

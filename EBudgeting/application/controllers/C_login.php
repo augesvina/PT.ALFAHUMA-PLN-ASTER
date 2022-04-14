@@ -33,6 +33,8 @@ class C_login extends CI_Controller {
 	}
 	public function logout_admin()
 	{
+		$this->session->sess_destroy();
+        echo '<script>window.location="'.base_url().'";</script>';
 		
 	}
 }
