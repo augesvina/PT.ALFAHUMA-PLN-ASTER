@@ -44,7 +44,7 @@
   </head>
 <body class="hold-transition login-page" style="overflow-y: hidden;background:url(
 	'<?php echo base_url('assets/assets_style/image/plnLogin.jpeg');?>')no-repeat;background-size:100%;">
-  <?php echo base_url('');?>
+
     
 <div class="login-box">
 	<br/>
