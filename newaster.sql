@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2022 at 05:29 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+-- Generation Time: Apr 16, 2022 at 08:20 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -111,7 +111,6 @@ CREATE TABLE `pengajuan_anggaran` (
 
 CREATE TABLE `pos` (
   `id_pos` int(11) NOT NULL,
-  `id_pengajuan` int(11) NOT NULL,
   `nama_pos` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -123,7 +122,6 @@ CREATE TABLE `pos` (
 
 CREATE TABLE `sub_pos` (
   `id_subpos` int(11) NOT NULL,
-  `id_pengajuan` int(11) NOT NULL,
   `nama_subpos` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -135,7 +133,6 @@ CREATE TABLE `sub_pos` (
 
 CREATE TABLE `sub_pos2` (
   `id_subpos2` int(11) NOT NULL,
-  `id_pengajuan` int(11) NOT NULL,
   `nama_subpos2` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -223,22 +220,19 @@ ALTER TABLE `pengajuan_anggaran`
 -- Indexes for table `pos`
 --
 ALTER TABLE `pos`
-  ADD PRIMARY KEY (`id_pos`),
-  ADD KEY `id_pengajuan` (`id_pengajuan`);
+  ADD PRIMARY KEY (`id_pos`);
 
 --
 -- Indexes for table `sub_pos`
 --
 ALTER TABLE `sub_pos`
-  ADD PRIMARY KEY (`id_subpos`),
-  ADD KEY `id_pengajuan` (`id_pengajuan`);
+  ADD PRIMARY KEY (`id_subpos`);
 
 --
 -- Indexes for table `sub_pos2`
 --
 ALTER TABLE `sub_pos2`
-  ADD PRIMARY KEY (`id_subpos2`),
-  ADD KEY `id_pengajuan` (`id_pengajuan`);
+  ADD PRIMARY KEY (`id_subpos2`);
 
 --
 -- Indexes for table `transfer`
@@ -313,52 +307,34 @@ ALTER TABLE `transfer`
 -- Constraints for table `detail_pengajuananggaran`
 --
 ALTER TABLE `detail_pengajuananggaran`
-  ADD CONSTRAINT `detail_pengajuananggaran_ibfk_1` FOREIGN KEY (`id_pos`) REFERENCES `detail_pengajuananggaran` (`id_detailpengajuan`),
-  ADD CONSTRAINT `detail_pengajuananggaran_ibfk_2` FOREIGN KEY (`id_subpos`) REFERENCES `detail_pengajuananggaran` (`id_detailpengajuan`),
-  ADD CONSTRAINT `detail_pengajuananggaran_ibfk_3` FOREIGN KEY (`id_subpos2`) REFERENCES `detail_pengajuananggaran` (`id_detailpengajuan`),
-  ADD CONSTRAINT `detail_pengajuananggaran_ibfk_4` FOREIGN KEY (`id_pengajuan`) REFERENCES `detail_pengajuananggaran` (`id_detailpengajuan`);
+  ADD CONSTRAINT `detail_pengajuananggaran_ibfk_1` FOREIGN KEY (`id_pengajuan`) REFERENCES `pengajuan_anggaran` (`id_pengajuan`),
+  ADD CONSTRAINT `detail_pengajuananggaran_ibfk_2` FOREIGN KEY (`id_pos`) REFERENCES `pos` (`id_pos`),
+  ADD CONSTRAINT `detail_pengajuananggaran_ibfk_3` FOREIGN KEY (`id_subpos`) REFERENCES `sub_pos` (`id_subpos`),
+  ADD CONSTRAINT `detail_pengajuananggaran_ibfk_4` FOREIGN KEY (`id_subpos2`) REFERENCES `sub_pos2` (`id_subpos2`);
 
 --
 -- Constraints for table `pagu_anggaran`
 --
 ALTER TABLE `pagu_anggaran`
-  ADD CONSTRAINT `pagu_anggaran_ibfk_1` FOREIGN KEY (`id_anggota`) REFERENCES `pagu_anggaran` (`id_paguanggaran`);
+  ADD CONSTRAINT `pagu_anggaran_ibfk_1` FOREIGN KEY (`id_anggota`) REFERENCES `pegawai` (`id_anggota`);
 
 --
 -- Constraints for table `pegawai`
 --
 ALTER TABLE `pegawai`
-  ADD CONSTRAINT `pegawai_ibfk_1` FOREIGN KEY (`id_jabatan`) REFERENCES `pegawai` (`id_anggota`);
+  ADD CONSTRAINT `pegawai_ibfk_1` FOREIGN KEY (`id_jabatan`) REFERENCES `jabatan` (`id_jabatan`);
 
 --
 -- Constraints for table `pengajuan_anggaran`
 --
 ALTER TABLE `pengajuan_anggaran`
-  ADD CONSTRAINT `pengajuan_anggaran_ibfk_1` FOREIGN KEY (`id_anggota`) REFERENCES `pengajuan_anggaran` (`id_pengajuan`);
-
---
--- Constraints for table `pos`
---
-ALTER TABLE `pos`
-  ADD CONSTRAINT `pos_ibfk_1` FOREIGN KEY (`id_pengajuan`) REFERENCES `pos` (`id_pos`);
-
---
--- Constraints for table `sub_pos`
---
-ALTER TABLE `sub_pos`
-  ADD CONSTRAINT `sub_pos_ibfk_1` FOREIGN KEY (`id_pengajuan`) REFERENCES `sub_pos` (`id_subpos`);
-
---
--- Constraints for table `sub_pos2`
---
-ALTER TABLE `sub_pos2`
-  ADD CONSTRAINT `sub_pos2_ibfk_1` FOREIGN KEY (`id_pengajuan`) REFERENCES `sub_pos2` (`id_subpos2`);
+  ADD CONSTRAINT `pengajuan_anggaran_ibfk_1` FOREIGN KEY (`id_anggota`) REFERENCES `pegawai` (`id_anggota`);
 
 --
 -- Constraints for table `transfer`
 --
 ALTER TABLE `transfer`
-  ADD CONSTRAINT `transfer_ibfk_1` FOREIGN KEY (`id_anggota`) REFERENCES `transfer` (`id_transfer`);
+  ADD CONSTRAINT `transfer_ibfk_1` FOREIGN KEY (`id_anggota`) REFERENCES `pegawai` (`id_anggota`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
