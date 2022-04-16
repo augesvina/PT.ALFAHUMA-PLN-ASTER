@@ -55,7 +55,7 @@
   <!-- /.login-logo -->
   <div class="login-box-body" style="border:2px solid #226bbf;">
     <p class="login-box-msg" style="font-size:16px;"></p>
-    <form action="<?= base_url('C_login/login_admin');?>" method="POST">
+    <form action="<?= base_url('C_login/authentikasi_admin');?>" method="POST">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Username" id="user" name="user" required="required" autocomplete="off">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -64,6 +64,7 @@
         <input type="password" class="form-control" placeholder="Password" id="pass" name="pass" required="required" autocomplete="off">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
+  
       <div class="row">
         <div class="col-xs-8">
         <!-- /.col

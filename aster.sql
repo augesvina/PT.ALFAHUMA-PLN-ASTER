@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2022 at 08:20 AM
+-- Generation Time: Apr 16, 2022 at 01:29 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.28
 
@@ -51,6 +51,15 @@ CREATE TABLE `jabatan` (
   `tingkatan_user` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `jabatan`
+--
+
+INSERT INTO `jabatan` (`id_jabatan`, `nama_jabatan`, `tingkatan_user`) VALUES
+(1, 'Sub Bidang', 'user'),
+(2, 'DM', 'Sub Admin'),
+(3, 'DMPAU', 'Admin');
+
 -- --------------------------------------------------------
 
 --
@@ -82,6 +91,15 @@ CREATE TABLE `pegawai` (
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pegawai`
+--
+
+INSERT INTO `pegawai` (`id_anggota`, `id_jabatan`, `nama_anggota`, `tgl_lahir`, `alamat`, `divisi`, `username`, `password`) VALUES
+(1, 1, 'Rohman', '2022-04-13', 'Jl panglima Tempur', 'Administrasi Keuangan', 'rohman@coba.com', 'rohman'),
+(2, 2, 'DM', '2022-04-14', 'meong', 'DM', 'DM', 'DM'),
+(3, 3, 'DMPAU', '2022-04-20', 'DMPAU', 'DMPAU', 'DMPAU', 'DMPAU');
 
 -- --------------------------------------------------------
 
@@ -255,7 +273,7 @@ ALTER TABLE `detail_pengajuananggaran`
 -- AUTO_INCREMENT for table `jabatan`
 --
 ALTER TABLE `jabatan`
-  MODIFY `id_jabatan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_jabatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `pagu_anggaran`
@@ -267,7 +285,7 @@ ALTER TABLE `pagu_anggaran`
 -- AUTO_INCREMENT for table `pegawai`
 --
 ALTER TABLE `pegawai`
-  MODIFY `id_anggota` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_anggota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `pengajuan_anggaran`
