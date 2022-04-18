@@ -387,6 +387,13 @@
             <span class="pull-right-container">
             </span>
           </a>
+					         <li>
+          <a href="pages/widgets.html">
+            <i class="fa fa-sign-out"></i> <span>Logout</span>
+            <span class="pull-right-container">
+            </span>
+          </a>
+          </li> 
           <a href="pages/calendar.html">
             <i class="fa fa-calendar"></i> <span>Calendar</span>
             <span class="pull-right-container">
