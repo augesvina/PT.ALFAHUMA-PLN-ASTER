@@ -70,12 +70,12 @@ class C_login extends CI_Controller
 		
 		$id_jabatan = $this->session->userdata('id_jabatan');
 		if ($id_jabatan == "3") {
-			$this->load->view('dashboard/testadmin');
+			$this->load->view('dashboard/dashboard');
 		} elseif ($id_jabatan == "2") {
 			$this->load->view('dashboard/dashboard_bidang');
 		}
 		elseif ($id_jabatan == "1") {
-			$this->load->view('dashboard/testsub');
+			$this->load->view('dashboard/dashboard_subbidang');
 		}
 		 else {
 			redirect(base_url("C_login"));
@@ -86,7 +86,13 @@ class C_login extends CI_Controller
 	}
 	public function logout_admin()
 	{
+		$akun = array('id_jabatan', 'nama_anggota');
+		
+
+		$this->session->unset_userdata($akun);
+	
+		
 		$this->session->sess_destroy();
-		echo '<script>window.location="' . base_url() . '";</script>';
+		redirect(base_url("C_login"));
 	}
 }
