@@ -341,11 +341,11 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Jabatan</a></li>
+            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Role Admin</a></li>
             <li><a href="index2.html"><i class="fa fa-circle-o"></i> Pegawai</a></li>
             <li><a href="index2.html"><i class="fa fa-circle-o"></i> Pos</a></li>
             <li><a href="index2.html"><i class="fa fa-circle-o"></i> Sub Pos</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Sub Pos 2 </a></li>
+            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Sub Pos Barang </a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -362,6 +362,14 @@
           </ul>
         </li>
         <li>
+          <a href="pages/widgets.html">
+            <i class="fa fa-check"></i> <span>Persetujuan</span>
+            <span class="pull-right-container">
+              <span class="pull-right-container">
+            </span>
+          </a>
+        </li>
+        <li>                 
           <a href="pages/widgets.html">
             <i class="fa fa-th"></i> <span>Koreksi Anggaran</span>
             <span class="pull-right-container">
