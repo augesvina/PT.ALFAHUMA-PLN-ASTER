@@ -11,8 +11,16 @@ class C_login extends CI_Controller
 	}
 	public function index()
 	{
+		$id_jabatan = $this->session->userdata('id_jabatan');
+
+		if (isset($id_jabatan)) {
+			# code...
+			redirect('C_login/login_admin');
+		}else {
+			$this->load->view('login/login');
+
+		}
 		
-		$this->load->view('login/login');
 	}
 	public function authentikasi_admin()
 	{
@@ -64,7 +72,7 @@ class C_login extends CI_Controller
 		if ($id_jabatan == "3") {
 			$this->load->view('dashboard/testadmin');
 		} elseif ($id_jabatan == "2") {
-			$this->load->view('dashboard/testsub');
+			$this->load->view('dashboard/dashboard_bidang');
 		}
 		elseif ($id_jabatan == "1") {
 			$this->load->view('dashboard/testsub');
