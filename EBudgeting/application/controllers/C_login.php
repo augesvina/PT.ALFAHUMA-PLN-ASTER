@@ -10,6 +10,7 @@ class C_login extends CI_Controller
 		$this->load->library('session');
 		$this->load->model('M_ajuananggaran');
 	}
+	
 	public function index()
 	{
 		$id_jabatan = $this->session->userdata('id_jabatan');
@@ -21,6 +22,7 @@ class C_login extends CI_Controller
 			$this->load->view('login/login');
 		}
 	}
+	
 	public function authentikasi_admin()
 	{
 

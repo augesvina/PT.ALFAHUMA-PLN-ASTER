@@ -25,5 +25,7 @@ class C_rekap_pos extends CI_Controller
         $this->load->view('template/sidebar');
         $this->load->view('rekapitulasi/rekap_pos.php');
         $this->load->view('template/footer');
+        $this->load->view('template/head');
+        $this->load->view('template/js');
     }
 }
