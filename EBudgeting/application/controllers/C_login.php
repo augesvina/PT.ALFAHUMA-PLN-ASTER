@@ -8,6 +8,7 @@ class C_login extends CI_Controller
 		parent::__construct();
 		$this->load->model('M_user');
 		$this->load->library('session');
+		$this->load->model('M_ajuananggaran');
 	}
 	public function index()
 	{
@@ -46,9 +47,11 @@ class C_login extends CI_Controller
 			// var_dump($query);
 			$id_jabatan = $query['id_jabatan'];
 			$nama_anggota = $query['nama_anggota'];
+			$id_anggota = $query['id_anggota'];
 			$akun = array(
 				'id_jabatan' => $id_jabatan,
-				'nama_anggota' => $nama_anggota
+				'nama_anggota' => $nama_anggota,
+				'id_anggota' =>  $id_anggota
 			);
 			$this->session->set_userdata($akun);
 			redirect('C_login/login_admin');
@@ -66,7 +69,14 @@ class C_login extends CI_Controller
 	}
 	public function login_admin()
 	{
+		$id_anggota = $this->session->userdata('id_anggota');
+		$pengajuan = $this->M_ajuananggaran->showbyid_pengajuan($id_anggota);
+
+		$data['nomor'] = $pengajuan['nomor'];
+		$data['pengajuan'] = $pengajuan['pengajuan'];
 		
+
+
 		
 		$id_jabatan = $this->session->userdata('id_jabatan');
 		if ($id_jabatan == "3") {
@@ -75,7 +85,7 @@ class C_login extends CI_Controller
 			$this->load->view('dashboard/dashboard_bidang');
 		}
 		elseif ($id_jabatan == "1") {
-			$this->load->view('dashboard/dashboard_subbidang');
+			$this->load->view('dashboard/dashboard_subbidang',$data);
 		}
 		 else {
 			redirect(base_url("C_login"));
@@ -86,7 +96,7 @@ class C_login extends CI_Controller
 	}
 	public function logout_admin()
 	{
-		$akun = array('id_jabatan', 'nama_anggota');
+		$akun = array('id_jabatan', 'nama_anggota', 'id_anggota');
 		
 
 		$this->session->unset_userdata($akun);
