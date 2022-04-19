@@ -17,11 +17,9 @@ class C_login extends CI_Controller
 		if (isset($id_jabatan)) {
 			# code...
 			redirect('C_login/login_admin');
-		}else {
+		} else {
 			$this->load->view('login/login');
-
 		}
-		
 	}
 	public function authentikasi_admin()
 	{
@@ -35,8 +33,8 @@ class C_login extends CI_Controller
 
 		$user = $this->input->post('user');
 		$pass = $this->input->post('pass');
-		
-		
+
+
 
 
 
@@ -55,17 +53,16 @@ class C_login extends CI_Controller
 			);
 			$this->session->set_userdata($akun);
 			redirect('C_login/login_admin');
-			
 		}
-		
 
-		
+
+
 
 
 		// $status_admin = $_POST['status'];
 
 
-		
+
 	}
 	public function login_admin()
 	{
@@ -74,34 +71,32 @@ class C_login extends CI_Controller
 
 		$data['nomor'] = $pengajuan['nomor'];
 		$data['pengajuan'] = $pengajuan['pengajuan'];
-		
 
 
-		
+
+
 		$id_jabatan = $this->session->userdata('id_jabatan');
 		if ($id_jabatan == "3") {
 			$this->load->view('dashboard/dashboard');
 		} elseif ($id_jabatan == "2") {
 			$this->load->view('dashboard/dashboard_bidang');
-		}
-		elseif ($id_jabatan == "1") {
-			$this->load->view('dashboard/dashboard_subbidang',$data);
-		}
-		 else {
+		} elseif ($id_jabatan == "1") {
+			$this->load->view('dashboard/dashboard_subbidang', $data);
+		} else {
 			redirect(base_url("C_login"));
 		}
-		
+
 
 		// $this->load->view('dashboard/dashboard');
 	}
 	public function logout_admin()
 	{
 		$akun = array('id_jabatan', 'nama_anggota', 'id_anggota');
-		
+
 
 		$this->session->unset_userdata($akun);
-	
-		
+
+
 		$this->session->sess_destroy();
 		redirect(base_url("C_login"));
 	}

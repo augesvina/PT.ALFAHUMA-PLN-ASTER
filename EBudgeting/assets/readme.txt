@@ -1,1 +1,0 @@
-kek ne kene ya
