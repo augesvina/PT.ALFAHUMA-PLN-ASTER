@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class C_rekap_pos extends CI_Controller
+class C_dashboard_subbidang extends CI_Controller
 {
 
     /**
@@ -19,11 +19,11 @@ class C_rekap_pos extends CI_Controller
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/userguide3/general/urls.html
      */
-    public function index()
+    public function dashboard()
     {
-        $this->load->view('template/header');
-        $this->load->view('template/sidebar');
-        $this->load->view('rekapitulasi/rekap_pos.php');
-        $this->load->view('template/footer');
+        $this->load->view('templatesub/header');
+        $this->load->view('templatesub/sidebar');
+        $this->load->view('dashboard/dashboard_subbidang.php');
+        $this->load->view('templatesub/footer');
     }
 }

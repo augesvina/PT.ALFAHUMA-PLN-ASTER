@@ -10,7 +10,7 @@ class C_login extends CI_Controller
 		$this->load->library('session');
 		$this->load->model('M_ajuananggaran');
 	}
-	
+
 	public function index()
 	{
 		$id_jabatan = $this->session->userdata('id_jabatan');
@@ -22,7 +22,7 @@ class C_login extends CI_Controller
 			$this->load->view('login/login');
 		}
 	}
-	
+
 	public function authentikasi_admin()
 	{
 
@@ -81,9 +81,15 @@ class C_login extends CI_Controller
 		if ($id_jabatan == "3") {
 			$this->load->view('dashboard/dashboard');
 		} elseif ($id_jabatan == "2") {
-			$this->load->view('dashboard/dashboard_bidang');
+			$this->load->view('templatesub/header', $data);
+			$this->load->view('templatesub/sidebar', $data);
+			$this->load->view('dashboard/dashboard_bidang.php', $data);
+			$this->load->view('templatesub/footer', $data);
 		} elseif ($id_jabatan == "1") {
-			$this->load->view('dashboard/dashboard_subbidang', $data);
+			$this->load->view('templatesub/header', $data);
+			$this->load->view('templatesub/sidebar', $data);
+			$this->load->view('dashboard/dashboard_subbidang.php', $data);
+			$this->load->view('templatesub/footer', $data);
 		} else {
 			redirect(base_url("C_login"));
 		}
