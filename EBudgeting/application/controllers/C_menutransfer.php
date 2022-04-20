@@ -1,24 +1,61 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class C_menutransfer extends CI_Controller {
+class C_menutransfer extends CI_Controller
+{
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model("M_menutransfer");
+        $this->load->library('form_validation');
+    }
 
+    public function index()
+    {
+        $data["transfer"] = $this->M_menutransfer->getAll();
+        $this->load->view("admin/transfers/list", $data);
+    }
 
-	public function add_rekaptransfer() 
-	{
+    public function add()
+    {
+        $transfers = $this->M_menutransfer;
+        $validation = $this->form_validation;
+        $validation->set_rules($transfers->rules());
 
-	}
-	public function delete_rekaptransfer()
-	{
+        if ($validation->run()) {
+            $transfers->save();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
 
-	}
-	public function update_rekaptransfer()
-	{
-		
-	}
-    public function show_rekaptransfer()
-	{
-		
-	}
+        $this->load->view("admin/transfers/new_form");
+    }
 
+    public function edit($id = null)
+    {
+        if (!isset($id)) redirect('admin/C_menutransfer');
+       
+        $transfers = $this->M_menutransfer;
+        $validation = $this->form_validation;
+        $validation->set_rules($transfers->rules());
+
+        if ($validation->run()) {
+            $transfers->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+
+        $data["transfers"] = $transfers->getById($id);
+        if (!$data["transfers"]) show_404();
+        
+        $this->load->view("admin/transfers/edit_form", $data);
+    }
+
+    public function delete($id=null)
+    {
+        if (!isset($id)) show_404();
+        
+        if ($this->M_menutransfer->delete($id)) {
+            redirect(site_url('admin/C_menutransfer'));
+        }
+    }
 }
