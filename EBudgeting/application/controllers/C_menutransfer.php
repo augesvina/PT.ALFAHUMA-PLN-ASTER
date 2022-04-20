@@ -14,21 +14,21 @@ class C_menutransfer extends CI_Controller
     public function index()
     {
         $data["transfer"] = $this->M_menutransfer->getAll();
-        $this->load->view("admin/transfers/list", $data);
+        $this->load->view("transfers/menutransfer", $data);
     }
 
     public function add()
     {
         $transfers = $this->M_menutransfer;
         $validation = $this->form_validation;
-        $validation->set_rules($transfers->rules());
+       
 
         if ($validation->run()) {
             $transfers->save();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
-        $this->load->view("admin/transfers/new_form");
+        $this->load->view("transfers/addtransfer");
     }
 
     public function edit($id = null)
@@ -52,10 +52,12 @@ class C_menutransfer extends CI_Controller
 
     public function delete($id=null)
     {
-        if (!isset($id)) show_404();
-        
-        if ($this->M_menutransfer->delete($id)) {
-            redirect(site_url('admin/C_menutransfer'));
+    
+        if (isset($id)) {
+            $this->M_menutransfer->delete($id);
+            redirect(site_url('transfers/menutransfer'));
+        }else {
+            echo "test";
         }
     }
 }

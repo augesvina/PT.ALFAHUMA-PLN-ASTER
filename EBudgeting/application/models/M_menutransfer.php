@@ -35,136 +35,136 @@ class M_menutransfer extends CI_Model
     public $waktu_kerja;
     public $lumpsum_uang_cod;
 
-    public function rules()
-    {
-        return [
-            ['field' => 'id_anggota',
-            'label' => 'Id_anggota',
-            'rules' => 'numeric'],
+    // public function rules()
+    // {
+    //     return [
+    //         ['field' => 'id_anggota',
+    //         'label' => 'Id_anggota',
+    //         'rules' => 'numeric'],
             
-            ['field' => 'nama_pengirim',
-            'label' => 'Nama_pengirim',
-            'rules' => 'required'],
+    //         ['field' => 'nama_pengirim',
+    //         'label' => 'Nama_pengirim',
+    //         'rules' => 'required'],
             
-            ['field' => 'email',
-            'label' => 'Email',
-            'rules' => 'required'],
+    //         ['field' => 'email',
+    //         'label' => 'Email',
+    //         'rules' => 'required'],
 
-            ['field' => 'no_telp',
-            'label' => 'No_telp',
-            'rules' => 'numeric'],
+    //         ['field' => 'no_telp',
+    //         'label' => 'No_telp',
+    //         'rules' => 'numeric'],
 
-            ['field' => 'no_rekening',
-            'label' => 'No_rekening',
-            'rules' => 'numeric'],
+    //         ['field' => 'no_rekening',
+    //         'label' => 'No_rekening',
+    //         'rules' => 'numeric'],
             
-            ['field' => 'nama_bank',
-            'label' => 'Nama_bank',
-            'rules' => 'required'],
+    //         ['field' => 'nama_bank',
+    //         'label' => 'Nama_bank',
+    //         'rules' => 'required'],
             
-            ['field' => 'tgl_kirim',
-            'label' => 'Tgl_kirim',
-            'rules' => 'required'],
+    //         ['field' => 'tgl_kirim',
+    //         'label' => 'Tgl_kirim',
+    //         'rules' => 'required'],
 
-            ['field' => 'description',
-            'label' => 'Description',
-            'rules' => 'required'],
+    //         ['field' => 'description',
+    //         'label' => 'Description',
+    //         'rules' => 'required'],
             
-            ['field' => 'PPN',
-            'label' => 'PPN',
-            'rules' => 'numeric'],
+    //         ['field' => 'PPN',
+    //         'label' => 'PPN',
+    //         'rules' => 'numeric'],
 
-            ['field' => 'PPH_21',
-            'label' => 'PPH_21',
-            'rules' => 'numeric'],
+    //         ['field' => 'PPH_21',
+    //         'label' => 'PPH_21',
+    //         'rules' => 'numeric'],
 
-            ['field' => 'PPH_22',
-            'label' => 'PPH_22',
-            'rules' => 'numeric'],
+    //         ['field' => 'PPH_22',
+    //         'label' => 'PPH_22',
+    //         'rules' => 'numeric'],
 
-            ['field' => 'PPH_23',
-            'label' => 'PPH_23',
-            'rules' => 'numeric'],
+    //         ['field' => 'PPH_23',
+    //         'label' => 'PPH_23',
+    //         'rules' => 'numeric'],
 
-            ['field' => 'denda',
-            'label' => 'Denda',
-            'rules' => 'numeric'],
+    //         ['field' => 'denda',
+    //         'label' => 'Denda',
+    //         'rules' => 'numeric'],
 
-            ['field' => 'administrasi_bank',
-            'label' => 'Administrasi_bank',
-            'rules' => 'numeric'],
+    //         ['field' => 'administrasi_bank',
+    //         'label' => 'Administrasi_bank',
+    //         'rules' => 'numeric'],
 
-            ['field' => 'total_dibayar',
-            'label' => 'Total_dibayar',
-            'rules' => 'numeric'],
+    //         ['field' => 'total_dibayar',
+    //         'label' => 'Total_dibayar',
+    //         'rules' => 'numeric'],
 
-            ['field' => 'berita',
-            'label' => 'Berita',
-            'rules' => 'required'],
+    //         ['field' => 'berita',
+    //         'label' => 'Berita',
+    //         'rules' => 'required'],
 
-            ['field' => 'honor_asesmen',
-            'label' => 'Honor_asesmen',
-            'rules' => 'numeric'],
+    //         ['field' => 'honor_asesmen',
+    //         'label' => 'Honor_asesmen',
+    //         'rules' => 'numeric'],
 
-            ['field' => 'honor_evaluator',
-            'label' => 'Honor_evaluator',
-            'rules' => 'numeric'],
+    //         ['field' => 'honor_evaluator',
+    //         'label' => 'Honor_evaluator',
+    //         'rules' => 'numeric'],
 
-            ['field' => 'nilai_kontrak',
-            'label' => 'Nilai_kontrak',
-            'rules' => 'required'],
+    //         ['field' => 'nilai_kontrak',
+    //         'label' => 'Nilai_kontrak',
+    //         'rules' => 'required'],
 
-            ['field' => 'honor_tester',
-            'label' => 'Honor_tester',
-            'rules' => 'numeric'],
+    //         ['field' => 'honor_tester',
+    //         'label' => 'Honor_tester',
+    //         'rules' => 'numeric'],
 
-            ['field' => 'honor_feedback',
-            'label' => 'Honor_feedback',
-            'rules' => 'numeric'],
+    //         ['field' => 'honor_feedback',
+    //         'label' => 'Honor_feedback',
+    //         'rules' => 'numeric'],
 
-            ['field' => 'pekerjaan',
-            'label' => 'Pekerjaan',
-            'rules' => 'required'],
+    //         ['field' => 'pekerjaan',
+    //         'label' => 'Pekerjaan',
+    //         'rules' => 'required'],
 
-            ['field' => 'honor_pewawancara',
-            'label' => 'Honor_pewawancara',
-            'rules' => 'numeric'],
+    //         ['field' => 'honor_pewawancara',
+    //         'label' => 'Honor_pewawancara',
+    //         'rules' => 'numeric'],
 
-            ['field' => 'honor_korektor_pauli',
-            'label' => 'Honor_korektor_pauli',
-            'rules' => 'numeric'],
+    //         ['field' => 'honor_korektor_pauli',
+    //         'label' => 'Honor_korektor_pauli',
+    //         'rules' => 'numeric'],
 
-            ['field' => 'lumpsum_transport_bandara',
-            'label' => 'Lumpsum_transport_bandara',
-            'rules' => 'required'],
+    //         ['field' => 'lumpsum_transport_bandara',
+    //         'label' => 'Lumpsum_transport_bandara',
+    //         'rules' => 'required'],
 
-            ['field' => 'lumpsum_komsumsi',
-            'label' => 'Lumpsum_komsumsi',
-            'rules' => 'required'],
+    //         ['field' => 'lumpsum_komsumsi',
+    //         'label' => 'Lumpsum_komsumsi',
+    //         'rules' => 'required'],
 
-            ['field' => 'lumpsum_transpoet_lok',
-            'label' => 'Lumpsum_transpoet_lok',
-            'rules' => 'required'],
+    //         ['field' => 'lumpsum_transpoet_lok',
+    //         'label' => 'Lumpsum_transpoet_lok',
+    //         'rules' => 'required'],
 
-            ['field' => 'waktu_kerja',
-            'label' => 'Waktu_kerja',
-            'rules' => 'required'],
+    //         ['field' => 'waktu_kerja',
+    //         'label' => 'Waktu_kerja',
+    //         'rules' => 'required'],
 
-            ['field' => 'lumpsum_uang_cod',
-            'label' => 'Lumpsum_uang_cod',
-            'rules' => 'required']
+    //         ['field' => 'lumpsum_uang_cod',
+    //         'label' => 'Lumpsum_uang_cod',
+    //         'rules' => 'required']
 
-        ];
-    }
+    //     ];
+    // }
 
     public function getAll()
     {
-        return $this->db->get($this->_table)->result();
+        return $this->db->get($this->_table)->result_array();
     }
     
     public function getById($id)
     {
-        return $this->db->get_where($this->_table, ["id_transfer" => $id])->row();
+        return $this->db->get_where($this->$_table, ["id_transfer" => $id])->row();
     }
 
     public function save()
@@ -241,6 +241,6 @@ class M_menutransfer extends CI_Model
 
     public function delete($id)
     {
-        return $this->db->delete($this->_table, array("id_transfer" => $id));
+        $this->db->delete($this->$_table, array("id_transfer" => $id));
     }
 }
