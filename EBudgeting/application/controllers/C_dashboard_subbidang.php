@@ -21,9 +21,6 @@ class C_dashboard_subbidang extends CI_Controller
      */
     public function dashboard()
     {
-        $this->load->view('templatesub/header');
-        $this->load->view('templatesub/sidebar');
         $this->load->view('dashboard/dashboard_subbidang.php');
-        $this->load->view('templatesub/footer');
     }
 }

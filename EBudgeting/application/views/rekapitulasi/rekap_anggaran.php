@@ -423,17 +423,57 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <h1>Rekapitulasi Anggaran
-                </h1>
-                <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                    <li class="active">Dashboard</li>
-                </ol>
-            </section>
+            <div class="container-fluid">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                        Rekapitulasi Anggaran
+                    </h1>
+                </section>
 
-            <!-- Main content -->
+                <!-- Main content -->
+                <div class="card mb-3">
+                    <section class="content-header mb-5"></section>
+                    <div class="card-header">
+                        <a class="btn btn-primary" href="#">Tambah Data</a>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="table-responsive">
+                            <table class="table table-hover text-center table-striped" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <td rowspan="2">No</td>
+                                        <td rowspan="2">Kode Pos</td>
+                                        <td rowspan="2">Uraian</td>
+                                        <td colspan="5">Rencana Kebutuhan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Minggu I</td>
+                                        <td>Minggu II</td>
+                                        <td>Minggu III</td>
+                                        <td>Minggu IV</td>
+                                        <td>Total</td>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-striped">
+                                    <tr>
+                                        <!-- masukkan data dengan php echo beserta perulangan -->
+                                        <td>1</td>
+                                        <td>001</td>
+                                        <td>Biaya Operasi</td>
+                                        <td>5</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>14</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- right col -->
         </div>

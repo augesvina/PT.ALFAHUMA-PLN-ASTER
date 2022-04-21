@@ -271,24 +271,9 @@
 
                                     <p>
                                         Alexander Pierce - Web Developer
-                                        <small>Member since Nov. 2012</small>
                                     </p>
                                 </li>
-                                <!-- Menu Body -->
-                                <li class="user-body">
-                                    <div class="row">
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Followers</a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Sales</a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Friends</a>
-                                        </div>
-                                    </div>
-                                    <!-- /.row -->
-                                </li>
+
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
@@ -344,9 +329,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Role Admin</a></li>
-                            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Pegawai</a></li>
-                            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Pos</a></li>
+                            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Pos</a></li>
                             <li><a href="index2.html"><i class="fa fa-circle-o"></i> Sub Pos</a></li>
                             <li><a href="index2.html"><i class="fa fa-circle-o"></i> Sub Pos Barang </a></li>
                         </ul>
@@ -391,19 +374,6 @@
                             <span class="pull-right-container">
                             </span>
                         </a>
-                    <li>
-                        <a href="pages/calendar.html">
-                            <i class="fa fa-calendar"></i> <span>Calendar</span>
-                            <span class="pull-right-container">
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pages/widgets.html">
-                            <i class="fa fa-sign-out"></i> <span>Logout</span>
-                            <span class="pull-right-container">
-                            </span>
-                        </a>
                     </li>
                     <ul class="treeview-menu">
                         <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
@@ -423,17 +393,59 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <h1>Rekapitulasi Pos Anggaran
-                </h1>
-                <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                    <li class="active">Dashboard</li>
-                </ol>
-            </section>
+            <div class="container-fluid">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                        Rekapitulasi Pos Anggaran
+                    </h1>
+                </section>
 
-            <!-- Main content -->
+                <!-- Main content -->
+
+                <div class="card mb-3">
+                    <section class="content-header mb-5"></section>
+                    <div class="card-header">
+                        <a class="btn btn-primary" href="#">Tambah Data</a>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="table-responsive">
+                            <table class="table table-hover text-center table-striped" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <td rowspan="2">No</td>
+                                        <td rowspan="2">Kode Pos</td>
+                                        <td rowspan="2">Uraian</td>
+                                        <td colspan="5">Rencana Kebutuhan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Minggu I</td>
+                                        <td>Minggu II</td>
+                                        <td>Minggu III</td>
+                                        <td>Minggu IV</td>
+                                        <td>Total</td>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-striped">
+                                    <tr>
+                                        <!-- masukkan data dengan php echo beserta perulangan -->
+                                        <td>1</td>
+                                        <td>001</td>
+                                        <td>Biaya Jasa</td>
+                                        <td>7</td>
+                                        <td>1</td>
+                                        <td>6</td>
+                                        <td>3</td>
+                                        <td>17</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <!-- right col -->
         </div>

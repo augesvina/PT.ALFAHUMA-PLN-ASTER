@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class C_dashboard extends CI_Controller
+class C_dashboard_bidang extends CI_Controller
 {
 
 	/**
@@ -21,10 +21,6 @@ class C_dashboard extends CI_Controller
 	 */
 	public function dashboard()
 	{
-		$this->load->view('templatesub/header');
-		$this->load->view('templatesub/sidebar');
 		$this->load->view('dashboard/dashboard_bidang.php');
-		$this->load->view('templatesub/footer');
-		
 	}
 }
