@@ -22,7 +22,7 @@ class C_input_jabatan extends CI_Controller
     public function index()
     {
         $this->load->view('template/sidebar');
-        $this->load->view('input_jabatan.php');
+        $this->load->view('user/input_jabatan.php');
         $this->load->view('template/footer');
     }
 }
