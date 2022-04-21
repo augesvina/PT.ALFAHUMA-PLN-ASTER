@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class C_rekap_pos extends CI_Controller
+class C_rekap_anggaran extends CI_Controller
 {
 
     /**
@@ -21,11 +21,8 @@ class C_rekap_pos extends CI_Controller
      */
     public function index()
     {
-        $this->load->view('template/header');
         $this->load->view('template/sidebar');
         $this->load->view('rekapitulasi/rekap_anggaran.php');
         $this->load->view('template/footer');
-        $this->load->view('template/head');
-        
     }
 }
