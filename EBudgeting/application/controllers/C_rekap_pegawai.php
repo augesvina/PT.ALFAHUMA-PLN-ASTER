@@ -22,7 +22,7 @@ class C_rekap_pegawai extends CI_Controller
     public function index()
     {
         $this->load->view('template/sidebar');
-        $this->load->view('masterpos/rekap_pegawai.php');
+        $this->load->view('rekap_pegawai.php');
         $this->load->view('template/footer');
     }
 }
