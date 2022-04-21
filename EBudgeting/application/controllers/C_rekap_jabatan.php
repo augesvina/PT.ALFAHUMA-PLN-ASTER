@@ -22,7 +22,7 @@ class C_rekap_jabatan extends CI_Controller
     public function index()
     {
         $this->load->view('template/sidebar');
-        $this->load->view('masterpos/rekap_jabatan.php');
+        $this->load->view('rekap_jabatan.php');
         $this->load->view('template/footer');
     }
 }
