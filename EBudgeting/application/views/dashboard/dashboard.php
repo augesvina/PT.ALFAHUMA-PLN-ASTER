@@ -351,12 +351,11 @@
               <li><a href="index2.html"><i class="fa fa-circle-o"></i> Sub Pos Barang </a></li>
             </ul>
           </li>
-          <li class="treeview">
+          <li class=" active treeview">
             <a href="#">
-              <i class="fa fa-files-o"></i>
-              <span>Rekapitulasi</span>
+              <i class="fa fa-files-o"></i> <span>Rekapitulasi</span>
               <span class="pull-right-container">
-                <span class="label label-primary pull-right">2</span>
+                <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
@@ -366,7 +365,7 @@
           </li>
           <li>
             <a href="pages/widgets.html">
-              <i class="fa fa-check"></i> <span>Persetujuan</span>
+              <i class="fa fa-check"></i> <span>Persetujuan DMPAU</span>
               <span class="pull-right-container">
                 <span class="pull-right-container">
                 </span>
@@ -376,7 +375,6 @@
             <a href="pages/widgets.html">
               <i class="fa fa-th"></i> <span>Koreksi Anggaran</span>
               <span class="pull-right-container">
-                <small class="label pull-right bg-green">new</small>
               </span>
             </a>
           </li>
@@ -389,24 +387,23 @@
           </li>
           <li>
             <a href="pages/widgets.html">
-              <i class="fa fa-laptop"></i> <span>Setting Pagu</span>
+              <i class="fa fa-laptop"></i> <span>Setting Pagu Anggaran</span>
               <span class="pull-right-container">
               </span>
             </a>
+          <li>
+            <a href="pages/calendar.html">
+              <i class="fa fa-calendar"></i> <span>Calendar</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
           <li>
             <a href="pages/widgets.html">
               <i class="fa fa-sign-out"></i> <span>Logout</span>
               <span class="pull-right-container">
               </span>
             </a>
-          </li>
-          <a href="pages/calendar.html">
-            <i class="fa fa-calendar"></i> <span>Calendar</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-red">3</small>
-              <small class="label pull-right bg-blue">17</small>
-            </span>
-          </a>
           </li>
           <ul class="treeview-menu">
             <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
