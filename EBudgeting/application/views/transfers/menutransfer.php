@@ -82,7 +82,7 @@
             <td><?php echo $id_anggota['lumpsum_uang_cod'] ?></td>
             <td>
             
-                <a href="<?php echo site_url('C_menutransfer/update/'). $id_anggota['id_transfer']; ?>">Edit</a>
+                <a href="<?php echo site_url('C_menutransfer/edit/'). $id_anggota['id_transfer']; ?>">Edit</a>
                 <a href="<?php echo site_url('C_menutransfer/delete/'). $id_anggota['id_transfer']; ?>">Hapus</a>
             </td>
         </tr>

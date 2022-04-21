@@ -1,6 +1,6 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 class C_menutransfer extends CI_Controller
 {
@@ -8,6 +8,7 @@ class C_menutransfer extends CI_Controller
     {
         parent::__construct();
         $this->load->model("M_menutransfer");
+        $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
     }
 
@@ -19,45 +20,48 @@ class C_menutransfer extends CI_Controller
 
     public function add()
     {
-        $transfers = $this->M_menutransfer;
-        $validation = $this->form_validation;
-       
 
-        if ($validation->run()) {
-            $transfers->save();
-            $this->session->set_flashdata('success', 'Berhasil disimpan');
+
+        $this->form_validation->set_rules('nama_pengirim', 'Nama Pengirim', 'required');
+        echo $this->form_validation->run();
+        if ($this->form_validation->run()) {
+            // $this->session->set_flashdata('success', 'Berhasil disimpan');
+            $this->M_menutransfer->save();
+        } else {
+            $this->load->view("transfers/addtransfer");
         }
-
-        $this->load->view("transfers/addtransfer");
     }
 
     public function edit($id = null)
     {
-        if (!isset($id)) redirect('admin/C_menutransfer');
-       
+
+
         $transfers = $this->M_menutransfer;
         $validation = $this->form_validation;
-        $validation->set_rules($transfers->rules());
+        $validation->set_rules('nama_pengirim', 'Nama Pengirim', 'required');
 
         if ($validation->run()) {
-            $transfers->update();
-            $this->session->set_flashdata('success', 'Berhasil disimpan');
+            $transfers->update($id);
+          
+            redirect(site_url('C_menutransfer'));
+        } else {
+           
+            $data["transfers"] = $transfers->getById($id);
+           
+            $this->load->view("transfers/updatetransfer", $data);
         }
-
-        $data["transfers"] = $transfers->getById($id);
-        if (!$data["transfers"]) show_404();
-        
-        $this->load->view("admin/transfers/edit_form", $data);
     }
 
-    public function delete($id=null)
+    public function delete($id = null)
     {
-    
+
         if (isset($id)) {
             $this->M_menutransfer->delete($id);
-            redirect(site_url('transfers/menutransfer'));
-        }else {
-            echo "test";
+    
+            redirect(site_url('C_menutransfer'));
+        } 
+        else {
+            show_error('Invalid Action has been detected please back to previous page',404,"Invalid Action Error 404");
         }
     }
 }

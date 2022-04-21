@@ -22,6 +22,9 @@ class C_masterpos_subpos extends CI_Controller
 			$this->M_masterpos_subpos->add_posM();
 			redirect(site_url('C_masterpos_subpos/show_pos'));
 		}
+
+
+		$this->load->view('masterpos/addpos');
 	}
 	public function delete_pos($id)
 	{
