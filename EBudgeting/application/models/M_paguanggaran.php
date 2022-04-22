@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') or exit('NO direct script acces allowed');
 
-class M_paguanggaran extends 
+class M_paguanggaran extends CI_Model
 
 { 
     public function add_paguanggaranM()

@@ -438,7 +438,7 @@
                             <div class="card mb-3">
                     <section class="content-header mb-5"></section>
                     <div class="card-header">
-                        <a class="btn btn-primary" href="#">Tambah Data</a>
+                        <a class="btn btn-primary" href="<?php echo site_url('C_user/add_user'); ?>">Tambah Data</a>
                     </div>
                     <div class="card-body">
 
@@ -458,19 +458,30 @@
                                     </tr>
                                 </thead>
                                 <tbody class="table-striped">
+                                    <?php $no = 0; ?>
+                                    <?php foreach ($pegawai as $key) :?>
+                                        <?php 
+                                            $no++
+                                        ?>
                                     <tr>
                                         <!-- masukkan data dengan php echo beserta perulangan -->
-                                        <td> 001</td>
-                                        <td> Rohman </td>
-                                        <td> 08-08-2022 </td>
-                                        <td> Madiun </td>
-                                        <td> konsumsi </td>
-                                        <td> DMPAU </td>
-                                        <td> Rohman </td>
-                                        <td> rohman123 </td>
-                                        <td></td>
+                                        <td> <?php echo $no;?> </td>
+                                        <td> <?php echo $key->id_jabatan;?> </td>
+                                        <td><?php echo $key->nama_anggota;?> </td>
+                                        <td><?php echo $key->tgl_lahir;?> </td>
+                                        <td><?php echo $key->alamat;?>  </td>
+                                        <td><?php echo $key->divisi;?> </td>
+                                        <td> <?php echo $key->username;?> </td>
+                                        <td> <?php echo md5($key->password);?>  </td>
+                                        <td>
+                                            <a href="<?php echo site_url('C_user/update_user/').$key->id_anggota; ?>">Edit</a>
+                                            <a href="<?php echo site_url('C_user/delete_user/').$key->id_anggota; ?>">Delete</a>
+
+                                        </td>
                                     </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
+
                             </table>
                         </div>
                     </div>

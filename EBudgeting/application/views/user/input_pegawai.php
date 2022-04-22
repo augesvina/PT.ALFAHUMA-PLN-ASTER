@@ -438,61 +438,56 @@
     <div class="card-header">
         <h3 class="card-title">
     </div>
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="<?php echo site_url('C_user/add_user');?>" method="post" enctype="multipart/form-data">
         <div class="card-body">
+            <input type="hidden" name="id_jabatan" id="id_jabatan" value="1">
 
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Nama Pegawai</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" id="" name="" placeholder="" required>
+                    <input type="text" class="form-control" id="nama_anggota" name="nama_anggota" placeholder="" required>
                 </div>
             </div>
 
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Tanggal lahir</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" id="date" name="" placeholder="" required>
+                    <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" placeholder="" required>
                 </div>
             </div>
 
            <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Alamat</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" id="" name="" placeholder="" required>
+                    <input type="text" class="form-control" id="alamat" name="alamat" placeholder="" required>
                 </div>
             </div>
 
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Divisi</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" id="" name="" placeholder="" required>
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Jabatan</label>
-                <div class="col-sm-5">
-                    <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="" required>
+                    <input type="text" class="form-control" id="divisi" name="divisi" placeholder="" required>
                 </div>
             </div>
 
              <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Username</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" id="" name="" placeholder="" required>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="" required>
                 </div>
             </div>
 
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Password</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" id="" name="" placeholder="" required>
+                    <input type="text" class="form-control" id="password" name="password" placeholder="" required>
                 </div>
             </div>
 
         </div>
         <div class="card-footer">
-            <input type="submit" name="Simpan" value="Simpan" class="btn btn-info">
+         
+            <button type="submit" class="btn btn-info">Simpan</button>
             <a href="?page=data-pegawai" title="Kembali" class="btn btn-secondary">Batal</a>
         </div>
     </form>
