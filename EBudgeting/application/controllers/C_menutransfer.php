@@ -27,6 +27,8 @@ class C_menutransfer extends CI_Controller
         if ($this->form_validation->run()) {
             // $this->session->set_flashdata('success', 'Berhasil disimpan');
             $this->M_menutransfer->save();
+            redirect(site_url('C_menutransfer'));
+
         } else {
             $this->load->view("transfers/addtransfer");
         }
