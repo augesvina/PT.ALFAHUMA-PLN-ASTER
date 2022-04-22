@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master SUB POS </title>
+    <title>Master POS </title>
 </head>
 <body>
+    <a href="<?php echo site_url('C_masterpos_subpos/add_subpos');?>">Tambah POS</a>
     <table>
         <tr>
             <th>No</th>
-            <th>Nama SUBPOS</th>
+            <th>Nama POS</th>
             <th>Aksi</th>
         </tr>
+        <?php 
+        $id = 0;
+        foreach ($sub_pos as $nama) :
+            $id++;
+            
+        
+         ?>
         <tr>
-            <td>1</td>
-            <td>Barang</td>
+            <td><?php echo $id; ?></td>
+            <td><?php echo $nama['nama_subpos'] ?></td>
             <td>
-                <a href="#">Edit</a>
-                <a href="#">Hapus</a>
+            
+                <a href="<?php echo site_url('C_masterpos_subpos/update_subpos/'). $nama['id_subpos']; ?>">Edit</a>
+                <a href="<?php echo site_url('C_masterpos_subpos/delete_subpos/'). $nama['id_subpos']; ?>">Hapus</a>
             </td>
         </tr>
+        <?php endforeach; ?>
     </table>
     
 </body>

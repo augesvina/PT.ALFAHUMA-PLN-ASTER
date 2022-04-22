@@ -24,7 +24,7 @@ class C_masterpos_subpos extends CI_Controller
 		}
 
 
-		$this->load->view('masterpos/addpos');
+
 	}
 	public function delete_pos($id)
 	{
@@ -58,31 +58,87 @@ class C_masterpos_subpos extends CI_Controller
 	// sub Pos
 	public function add_subpos()
 	{
+		$this->form_validation->set_rules('nama', 'Nama Pos', 'required');
+		if ($this->form_validation->run() == FALSE) {
+			$this->load->view('masterpos/addsubpos');
+		} else {
+
+			$this->M_masterpos_subpos->addsubposM();
+			redirect(site_url('C_masterpos_subpos/show_subpos'));
+		}
+
+
+	
 	}
-	public function delete_subpos()
+	public function delete_subpos($id)
 	{
+		$this->M_masterpos_subpos->delete_subposM($id);
+		redirect(site_url('C_masterpos_subpos/show_subpos'));
 	}
-	public function update_subpos()
+	public function update_subpos($id = null)
 	{
+		$this->form_validation->set_rules('nama', 'Nama Pos', 'required');
+
+
+		if ($this->form_validation->run() == FALSE) {
+			$data['sub_pos'] = $this->M_masterpos_subpos->show_subposM($id)[0];
+
+
+			$this->load->view('masterpos/updatesubpos', $data);
+		} else {
+
+			$this->M_masterpos_subpos->update_subposM();
+			redirect(site_url('C_masterpos_subpos/show_subpos'));
+		}
 	}
 	public function show_subpos()
 	{
-		$this->load->view('masterpos/subpos');
+		$data['sub_pos'] = $this->M_masterpos_subpos->show_subposM();
+		print_r($data['sub_pos']);
+		$this->load->view('masterpos/subpos', $data);
+		
 	}
 
 	// sub pos 2
 
 	public function add_subpos2()
 	{
+		$this->form_validation->set_rules('nama', 'Nama Pos', 'required');
+		if ($this->form_validation->run() == FALSE) {
+			$this->load->view('masterpos2/addpos');
+		} else {
+
+			$this->M_masterpos_subpos->addsubpos2M();
+			redirect(site_url('C_masterpos_subpos/show_subpos2'));
+		}
+
 	}
-	public function delete_subpos2()
+	public function delete_subpos2($id)
 	{
+		$this->M_masterpos_subpos->delete_subpos2M($id);
+		redirect(site_url('C_masterpos_subpos/show_subpos2'));
 	}
-	public function update_subpos2()
+	public function update_subpos2($id = null)
 	{
+		$this->form_validation->set_rules('nama', 'Nama Pos', 'required');
+
+
+		if ($this->form_validation->run() == FALSE) {
+			$data['sub_pos2'] = $this->M_masterpos_subpos->show_subpos2M($id)[0];
+
+
+			$this->load->view('masterpos2/updatepos', $data);
+		} else {
+
+			$this->M_masterpos_subpos->update_posM();
+			redirect(site_url('C_masterpos_subpos/show_subpos2'));
+		}
 	}
 	public function show_subpos2()
 	{
-		$this->load->view('masterpos/subpos2');
+		$data['sub_pos2'] = $this->M_masterpos_subpos->show_subpos2M();
+		print_r($data['sub_pos2']);
+		$this->load->view('masterpos/subpos2', $data);
+		
 	}
 }

@@ -25,11 +25,11 @@ class M_user extends CI_Model
     }
     public function update_user()
     { 
-        $id = $this->input->post('id_pos');
+        $id = $this->input->post('id_anggota');
         $data = array (
-            'id_anggota' => $this->input->post('id_anggota'),
+            'id_anggota' => $id,
             'id_jabatan' => $this->input->post('id_jabatan'),
-            '' => $this->input->post('nama_anggota'),
+            'nama_anggota' => $this->input->post('nama_anggota'),
             'tgl_lahir' => $this->input->post('tgl_lahir'),
             'alamat' => $this->input->post('alamat'),
             'divisi' => $this->input->post('divisi'),
@@ -37,23 +37,33 @@ class M_user extends CI_Model
             'password' => $this->input->post('password')
         );
 
-        $this->db->update('pos', $data, array('id_anggota' => $id));
+        $this->db->update('pegawai', $data, array('id_anggota' => $id));
+
 
     }
     public function show_user($passw = null, $user = null)
     { 
         if (isset($passw) && isset($user)) {
             $query = $this->db->get_where('pegawai', array('username' => $user,'password' => $passw), 1);
+  
             return $query->result_array()[0];
         }
+        
         else {
             $query = $this->db->get('pegawai');
+            
             return $query->result();
 
         }
-        
-        
 
+
+    }
+    // tambahan
+    public function show_user_id($id)
+    {
+        $query = $this->db->get_where('pegawai', array('id_anggota' => $id), 1);
+     
+        return $query->result();
 
     }
     
