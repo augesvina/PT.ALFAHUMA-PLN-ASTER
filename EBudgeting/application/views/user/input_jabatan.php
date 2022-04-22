@@ -318,7 +318,7 @@
                         <img src="<?php echo base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
-                        <p>Alexander Pierce</p>
+                        <p>Welcome DMPAU/ Admin</p>
                         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                     </div>
                 </div>
@@ -380,6 +380,13 @@
                     </li>
                     <li>
                         <a href="pages/widgets.html">
+                            <i class="fa fa-user"></i> <span>Add User</span>
+                            <span class="pull-right-container">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/widgets.html">
                             <i class="fa fa-edit"></i> <span>Transfer</span>
                             <span class="pull-right-container">
                             </span>
@@ -391,31 +398,17 @@
                             <span class="pull-right-container">
                             </span>
                         </a>
-                    <li>
-                        <a href="pages/calendar.html">
-                            <i class="fa fa-calendar"></i> <span>Calendar</span>
-                            <span class="pull-right-container">
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pages/widgets.html">
-                            <i class="fa fa-sign-out"></i> <span>Logout</span>
-                            <span class="pull-right-container">
-                            </span>
-                        </a>
-                    </li>
-                    <ul class="treeview-menu">
-                        <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-                        <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-                        <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-                        <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-                        <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-                        <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-                        <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-                        <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-                        <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
-                    </ul>
+                        <ul class="treeview-menu">
+                            <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
+                            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
+                            <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
+                            <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
+                            <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
+                            <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
+                            <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
+                            <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+                            <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
+                        </ul>
                     </li>
             </section>
             <!-- /.sidebar -->
@@ -425,8 +418,7 @@
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
-                <h1>Input Jabatan
-                </h1>
+                <h1>Tambah Jabatan</h1>
                 <ol class="breadcrumb">
                     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
                     <li class="active">Dashboard</li>
@@ -435,35 +427,33 @@
 
             <!-- Main content -->
             <form action="" method="post">
-            <div class="card card-primary">
-            <div class="card-header">
-            <h3 class="card-title">
-            </div>
-            <form action="" method="post" enctype="multipart/form-data">
-            <div class="card-body">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                    </div>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <div class="card-body">
+                            <label class="col-sm-2 col-form-label">Level</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="" name="" placeholder="" required>
+                            </div>
+                        </div>
 
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Level</label>
-                <div class="col-sm-5">
-                    <input type="text" class="form-control" id="" name="" placeholder="" required>
+
                 </div>
-            </div>
-
-
+                <div class="card-footer">
+                    <input type="submit" name="Simpan" value="Simpan" class="btn btn-info">
+                    <a href="?page=data-pengguna" title="Kembali" class="btn btn-secondary">Batal</a>
+                </div>
+            </form>
         </div>
-        <div class="card-footer">
-            <input type="submit" name="Simpan" value="Simpan" class="btn btn-info">
-            <a href="?page=data-pengguna" title="Kembali" class="btn btn-secondary">Batal</a>
-        </div>
-    </form>
-</div>
 
-            <!-- right col -->
-        </div>
-        <!-- /.row (main row) -->
+        <!-- right col -->
+    </div>
+    <!-- /.row (main row) -->
 
-        </section>
-        <!-- /.content -->
+    </section>
+    <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">

@@ -402,12 +402,17 @@
                 </section>
 
                 <!-- Main content -->
-
+                <select name="bln">
+                    <option selected="selected">Bulan</option>
+                    <?php
+                    $bulan = array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember");
+                    $jlh_bln = count($bulan);
+                    for ($c = 0; $c < $jlh_bln; $c += 1) {
+                        echo "<option value=$bulan[$c]> $bulan[$c] </option>";
+                    }
+                    ?>
+                </select>
                 <div class="card mb-3">
-                    <section class="content-header mb-5"></section>
-                    <div class="card-header">
-                        <a class="btn btn-primary" href="#">Tambah Data</a>
-                    </div>
                     <div class="card-body">
 
                         <div class="table-responsive">

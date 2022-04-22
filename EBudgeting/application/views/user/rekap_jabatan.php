@@ -270,25 +270,10 @@
                                     <img src="<?php echo base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                                     <p>
-                                        Alexander Pierce - Web Developer
-                                        <small>Member since Nov. 2012</small>
+                                        Account - DMPAU/ Admin
                                     </p>
                                 </li>
-                                <!-- Menu Body -->
-                                <li class="user-body">
-                                    <div class="row">
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Followers</a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Sales</a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Friends</a>
-                                        </div>
-                                    </div>
-                                    <!-- /.row -->
-                                </li>
+
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
@@ -318,7 +303,7 @@
                         <img src="<?php echo base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
-                        <p>Alexander Pierce</p>
+                        <p>Welcome DMPAU/ Admin</p>
                         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                     </div>
                 </div>
@@ -380,6 +365,13 @@
                     </li>
                     <li>
                         <a href="pages/widgets.html">
+                            <i class="fa fa-user"></i> <span>Add User</span>
+                            <span class="pull-right-container">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/widgets.html">
                             <i class="fa fa-edit"></i> <span>Transfer</span>
                             <span class="pull-right-container">
                             </span>
@@ -391,31 +383,17 @@
                             <span class="pull-right-container">
                             </span>
                         </a>
-                    <li>
-                        <a href="pages/calendar.html">
-                            <i class="fa fa-calendar"></i> <span>Calendar</span>
-                            <span class="pull-right-container">
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pages/widgets.html">
-                            <i class="fa fa-sign-out"></i> <span>Logout</span>
-                            <span class="pull-right-container">
-                            </span>
-                        </a>
-                    </li>
-                    <ul class="treeview-menu">
-                        <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-                        <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-                        <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-                        <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-                        <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-                        <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-                        <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-                        <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-                        <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
-                    </ul>
+                        <ul class="treeview-menu">
+                            <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
+                            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
+                            <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
+                            <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
+                            <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
+                            <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
+                            <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
+                            <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+                            <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
+                        </ul>
                     </li>
             </section>
             <!-- /.sidebar -->
@@ -423,24 +401,21 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <h1>Rekapitulasi Jabatan
-                </h1>
-                <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                    <li class="active">Dashboard</li>
-                </ol>
-            </section>
+            <div class="container-fluid">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                        Rekapitulasi Jabatan
+                    </h1>
+                </section>
 
-            <!-- Main content -->
+                <!-- Main content -->
                 <div class="card mb-3">
                     <section class="content-header mb-5"></section>
                     <div class="card-header">
-                        <a class="btn btn-primary" href="masterpos/input_jabatan.php">Tambah Data</a>
+                        <a class="btn btn-primary" href="#">Tambah Data</a>
                     </div>
                     <div class="card-body">
-
                         <div class="table-responsive">
                             <table class="table table-hover text-center table-striped" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
@@ -449,29 +424,14 @@
                                         <td rowspan="2">Role</td>
                                         <td rowspan="2">Akses</td>
                                         <td rowspan="2">Aksi</td>
-                                        
                                     </tr>
                                 </thead>
                                 <tbody class="table-striped">
                                     <tr>
-                                        <!-- masukkan data dengan php echo beserta perulangan -->
-                                        <td>1</td>
-                                        <td>DMPAU</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <!-- masukkan data dengan php echo beserta perulangan -->
-                                        <td>2</td>
-                                        <td>DM</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                     <tr>
-                                        <!-- masukkan data dengan php echo beserta perulangan -->
-                                        <td>3</td>
-                                        <td>Sub Bidang</td>
-                                        <td></td>
+                                        <td> 1 </td>
+                                        <td> Sub Bidang </td>
+                                        <td> </td>
+                                        <td> </td>
                                         <td></td>
                                     </tr>
                                 </tbody>
@@ -481,9 +441,7 @@
                 </div>
             </div>
 
-            <!-- right col -->
-        </div>
-        <!-- /.row (main row) -->
+
 
             <!-- right col -->
         </div>
@@ -492,14 +450,6 @@
         </section>
         <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 2.4.0
-        </div>
-        <strong>Copyright &copy; 2022 <a href="https://adminlte.io">PLN ASTER</a>.</strong> All rights
-        reserved.
-    </footer>
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">

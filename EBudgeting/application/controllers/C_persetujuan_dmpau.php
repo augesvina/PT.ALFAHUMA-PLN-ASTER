@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class C_add_role extends CI_Controller
+class C_persetujuan_dmpau extends CI_Controller
 {
 
     /**
@@ -22,7 +22,7 @@ class C_add_role extends CI_Controller
     public function index()
     {
         $this->load->view('template/sidebar');
-        $this->load->view('role/add_role.php');
+        $this->load->view('persetujuan/persetujuan_dmpau.php');
         $this->load->view('template/footer');
     }
 }

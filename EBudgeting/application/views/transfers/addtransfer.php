@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Transfer</title>
 </head>
+
 <body>
     <form action="<?php site_url('C_masterpos_subpos/add') ?>" method="post">
         <input type="text" name="id_anggota" placeholder="id_anggota" value="">
@@ -39,6 +41,7 @@
         <input type="text" name="lumpsum_uang_cod" placeholder="lumpsum_uang_cod">
         <button type="submit">Submit</button>
     </form>
-    
+
 </body>
+
 </html>

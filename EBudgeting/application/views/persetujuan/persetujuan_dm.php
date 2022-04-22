@@ -2,47 +2,12 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>E-Budgeting | Dashboard</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/bower_components/font-awesome/css/font-awesome.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/bower_components/Ionicons/css/ionicons.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/dist/css/AdminLTE.min.css">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/dist/css/skins/_all-skins.min.css">
-    <!-- Morris chart -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/bower_components/morris.js/morris.css">
-    <!-- jvectormap -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/bower_components/jvectormap/jquery-jvectormap.css">
-    <!-- Date Picker -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-    <!-- Daterange picker -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/bower_components/bootstrap-daterangepicker/daterangepicker.css">
-    <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
-    <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <?php $this->load->view("templatebidang/head.php") ?>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
-
         <header class="main-header">
             <!-- Logo -->
             <a href="index2.html" class="logo">
@@ -270,7 +235,7 @@
                                     <img src="<?php echo base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                                     <p>
-                                        Account - DMPAU/ Admin
+                                        Account - DM/ Bidang
                                     </p>
                                 </li>
 
@@ -303,7 +268,7 @@
                         <img src="<?php echo base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
-                        <p>Welcome DMPAU/ Admin</p>
+                        <p>Welcome DM/ Bidang</p>
                         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                     </div>
                 </div>
@@ -329,9 +294,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Role Admin</a></li>
-                            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Pegawai</a></li>
-                            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Pos</a></li>
+                            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Pos</a></li>
                             <li><a href="index2.html"><i class="fa fa-circle-o"></i> Sub Pos</a></li>
                             <li><a href="index2.html"><i class="fa fa-circle-o"></i> Sub Pos Barang </a></li>
                         </ul>
@@ -350,7 +313,7 @@
                     </li>
                     <li>
                         <a href="pages/widgets.html">
-                            <i class="fa fa-check"></i> <span>Persetujuan DMPAU</span>
+                            <i class="fa fa-check"></i> <span>Persetujuan DM</span>
                             <span class="pull-right-container">
                                 <span class="pull-right-container">
                                 </span>
@@ -359,13 +322,6 @@
                     <li>
                         <a href="pages/widgets.html">
                             <i class="fa fa-th"></i> <span>Koreksi Anggaran</span>
-                            <span class="pull-right-container">
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pages/widgets.html">
-                            <i class="fa fa-user"></i> <span>Add User</span>
                             <span class="pull-right-container">
                             </span>
                         </a>
@@ -401,38 +357,26 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            <div class="container-fluid">
-                <!-- Content Header (Page header) -->
-                <section class="content-header">
-                    <h1>
-                        Tambah Role
-                    </h1>
-                </section>
-
-                <!-- Main content -->
-                <div class="card card-primary">
-                    <div class="card-header">
-                        <h3 class="card-title">
-                    </div>
-                    <form action="" method="post" enctype="multipart/form-data">
-                        <div class="card-body">
-                            <label class="col-sm-2 col-form-label">Nama Role</label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" id="" name="" placeholder="" required>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <input type="submit" name="Simpan" value="Simpan" class="btn btn-info">
-                            <a href="?page=data-pegawai" title="Kembali" class="btn btn-secondary">Batal</a>
-                        </div>
-                    </form>
-                </div>
-
-                <!-- right col -->
-            </div>
-            <!-- /.row (main row) -->
-
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>Persetujuan DM</h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li class="active">Dashboard</li>
+                </ol>
             </section>
+
+            <!-- Main content -->
+            <select name="bln">
+                <?php
+                $bulan = array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember");
+                $jlh_bln = count($bulan);
+                for ($c = 0; $c < $jlh_bln; $c += 1) {
+                    echo "<option value=$bulan[$c]> $bulan[$c] </option>";
+                }
+                ?>
+            </select>
+
             <!-- /.content -->
         </div>
 
