@@ -330,7 +330,7 @@
           </li>
           <li>
             <a href="pages/widgets.html">
-              <i class="fa fa-th"></i> <span>Add User</span>
+              <i class="fa fa-user"></i> <span>Add User</span>
               <span class="pull-right-container">
               </span>
             </a>

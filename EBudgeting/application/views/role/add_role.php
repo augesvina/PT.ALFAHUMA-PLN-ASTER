@@ -270,11 +270,10 @@
                                     <img src="<?php echo base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                                     <p>
-                                        Alexander Pierce - Web Developer
-                                        <small>Member since Nov. 2012</small>
+                                        Account - DMPAU/ Admin
                                     </p>
                                 </li>
-                                
+
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
@@ -296,28 +295,28 @@
         </header>
         <!-- Left side column. contains the logo and sidebar -->
         <aside class="main-sidebar">
-            <!-- Sidebar user panel -->
-            <div class="user-panel">
-                <div class="pull-left image">
-                    <img src="<?php echo base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                </div>
-                <div class="pull-left info">
-                    <p>Alexander Pierce</p>
-                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                </div>
-            </div>
-            <!-- search form -->
-            <form action="#" method="get" class="sidebar-form">
-                <div class="input-group">
-                    <input type="text" name="q" class="form-control" placeholder="Search...">
-                    <span class="input-group-btn">
-                        <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                        </button>
-                    </span>
-                </div>
-            </form>
             <!-- sidebar: style can be found in sidebar.less -->
             <section class="sidebar">
+                <!-- Sidebar user panel -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="<?php echo base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="pull-left info">
+                        <p>Welcome DMPAU/ Admin</p>
+                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    </div>
+                </div>
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group">
+                        <input type="text" name="q" class="form-control" placeholder="Search...">
+                        <span class="input-group-btn">
+                            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
                 <!-- /.search form -->
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu" data-widget="tree">
@@ -366,6 +365,13 @@
                     </li>
                     <li>
                         <a href="pages/widgets.html">
+                            <i class="fa fa-user"></i> <span>Add User</span>
+                            <span class="pull-right-container">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/widgets.html">
                             <i class="fa fa-edit"></i> <span>Transfer</span>
                             <span class="pull-right-container">
                             </span>
@@ -377,18 +383,17 @@
                             <span class="pull-right-container">
                             </span>
                         </a>
-                    </li>
-                    <ul class="treeview-menu">
-                        <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-                        <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-                        <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-                        <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-                        <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-                        <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-                        <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-                        <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-                        <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
-                    </ul>
+                        <ul class="treeview-menu">
+                            <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
+                            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
+                            <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
+                            <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
+                            <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
+                            <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
+                            <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
+                            <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+                            <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
+                        </ul>
                     </li>
             </section>
             <!-- /.sidebar -->
@@ -400,9 +405,8 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Rekapitulasi Anggaran
+                        Pengaturan Hak Akses
                     </h1>
-
                 </section>
 
                 <!-- Main content -->
@@ -412,35 +416,23 @@
                         <a class="btn btn-primary" href="#">Tambah Data</a>
                     </div>
                     <div class="card-body">
-
                         <div class="table-responsive">
                             <table class="table table-hover text-center table-striped" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
                                         <td rowspan="2">No</td>
-                                        <td rowspan="2">Kode Pos</td>
-                                        <td rowspan="2">Uraian</td>
-                                        <td colspan="5">Rencana Kebutuhan</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Minggu I</td>
-                                        <td>Minggu II</td>
-                                        <td>Minggu III</td>
-                                        <td>Minggu IV</td>
-                                        <td>Total</td>
+                                        <td rowspan="2">Role</td>
+                                        <td rowspan="2">Akses</td>
+                                        <td rowspan="2">Aksi</td>
                                     </tr>
                                 </thead>
                                 <tbody class="table-striped">
                                     <tr>
-                                        <!-- masukkan data dengan php echo beserta perulangan -->
-                                        <td>1</td>
-                                        <td>001</td>
-                                        <td>Biaya Operasi</td>
-                                        <td>5</td>
-                                        <td>2</td>
-                                        <td>3</td>
-                                        <td>4</td>
-                                        <td>14</td>
+                                        <td> 1 </td>
+                                        <td> Sub Bidang </td>
+                                        <td> </td>
+                                        <td> </td>
+                                        <td></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -449,6 +441,8 @@
                 </div>
             </div>
 
+
+
             <!-- right col -->
         </div>
         <!-- /.row (main row) -->
@@ -456,14 +450,6 @@
         </section>
         <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 2.4.0
-        </div>
-        <strong>Copyright &copy; 2022 <a href="https://adminlte.io">PLN ASTER</a>.</strong> All rights
-        reserved.
-    </footer>
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
